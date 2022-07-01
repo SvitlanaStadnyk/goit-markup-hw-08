@@ -4,9 +4,18 @@
   letter-spacing: $letter-spacing;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: block;
-  .container {
-    display: flex;
-    align-items: baseline;
+  @include desktop {
+    display: block;
+    .container {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+  @include tablet {
+    display: block;
+    .container {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }

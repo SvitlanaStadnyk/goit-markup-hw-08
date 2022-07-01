@@ -52,7 +52,7 @@ img {
   margin: -1px;
 }
 
-.subscription__btn, .header .container, .features__image, .clients__link, .mail__link--header, .tel__link--header, .contacts__list--header, .socials__link, .agreement__check, .check__text, .modal-close__btn {
+.header .container, .features__image, .clients__link, .mail__link--header, .tel__link--header, .contacts__list--header, .socials__link, .agreement__check, .check__text, .modal-close__btn {
   display: flex;
   align-items: center;
 }
@@ -287,10 +287,19 @@ img {
   border-radius: 4px;
 }
 
-.socials {
-  margin-left: 70px;
-  margin-right: 93px;
-  text-align: left;
+@media screen and (min-width: 1200px) {
+  .socials {
+    margin-left: 70px;
+    margin-right: 93px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 480px) {
+  .socials {
+    margin-bottom: 60px;
+    margin-top: 60px;
+    text-align: center;
+  }
 }
 
 .socials__text {
@@ -300,7 +309,16 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-style: normal;
-  margin-bottom: 16px;
+}
+@media screen and (min-width: 480px) {
+  .socials__text {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .socials__text {
+    margin-bottom: 16px;
+  }
 }
 
 .socials__list {
@@ -342,6 +360,11 @@ img {
 
 .socials__list--dark {
   justify-content: left;
+}
+@media screen and (min-width: 480px) {
+  .socials__list--dark {
+    justify-content: center;
+  }
 }
 
 .socials__list--light {
@@ -387,6 +410,8 @@ img {
 .logo--light {
   color: #ffffff;
   text-decoration: none;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .logo--dark {
@@ -402,7 +427,17 @@ img {
   color: #ffffff;
   font-weight: 400;
   line-height: 1.71;
-  display: block;
+}
+@media screen and (min-width: 480px) {
+  .contacts__list--footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__list--footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .contacts__list--header {
@@ -412,8 +447,20 @@ img {
   text-align: center;
 }
 
-.contacts__item--footer:not(:last-child) {
-  margin-bottom: 9px;
+@media screen and (min-width: 480px) {
+  .contacts__item--footer:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__item--footer:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item--footer:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__item--header {
@@ -1016,16 +1063,42 @@ img {
   letter-spacing: 0.03em;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: block;
 }
-.address .container {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .address {
+    display: block;
+  }
+  .address .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) {
+  .address {
+    display: block;
+  }
+  .address .container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
-.subscription__details {
-  display: flex;
+.subscription {
+  text-align: center;
 }
+
+@media screen and (min-width: 480px) {
+  .subscription__details {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__details {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .subscription__text {
   font-weight: 700;
   font-size: 14px;
@@ -1037,6 +1110,12 @@ img {
   margin-bottom: 20px;
   display: flex;
 }
+@media screen and (min-width: 480px) {
+  .subscription__text {
+    justify-content: center;
+  }
+}
+
 .subscription__btn {
   background-color: #2196f3;
   color: #ffffff;
@@ -1054,14 +1133,21 @@ img {
   font-style: normal;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .subscription__btn {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .subscription__icon {
   margin-left: 10px;
 }
+
 .subscription__input {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-  width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -1073,6 +1159,16 @@ img {
   color: rgba(255, 255, 255, 0.6);
   margin-right: 12px;
   outline: none;
+}
+@media screen and (min-width: 480px) {
+  .subscription__input {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__input {
+    width: 358px;
+  }
 }
 
 .nav {
