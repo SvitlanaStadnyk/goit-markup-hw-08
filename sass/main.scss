@@ -1,0 +1,26 @@
+@import './utils/mixins';
+@import './utils/vars';
+@import './base/common';
+@import './base/reset';
+@import './utils/hidden';
+@import './utils/placeholders';
+
+@import './components/modal';
+@import './components/container';
+@import './components/section';
+@import './components/btn';
+@import './components/socials';
+@import './components/logo';
+@import './components/contacts';
+
+@import './layout/about';
+@import './layout/clients';
+@import './layout/features';
+@import './layout/header';
+@import './layout/main';
+@import './layout/team';
+@import './layout/filters';
+@import './layout/projects';
+@import './layout/footer';
+@import './layout/subscription';
+@import './layout/navigation';

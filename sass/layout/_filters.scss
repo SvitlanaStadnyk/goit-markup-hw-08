@@ -1,0 +1,54 @@
+.filters {
+  background-color: $white-color;
+  color: $main-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: $letter-spacing;
+  padding-top: 60px;
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include desktop {
+    padding-top: 97px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: row;
+    margin-bottom: 40px;
+    @include tablet {
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    @include desktop {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+  &__item {
+    margin-right: 8px;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__btn {
+    background-color: $secondary-bg-color;
+    color: $main-text-color;
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: $letter-spacing;
+    padding: 6px 22px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background-color: $accent-color;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 3px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

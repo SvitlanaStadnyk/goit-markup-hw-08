@@ -1,0 +1,12 @@
+.address {
+  background-color: $bg-color;
+  color: $white-color;
+  letter-spacing: $letter-spacing;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: block;
+  .container {
+    display: flex;
+    align-items: baseline;
+  }
+}

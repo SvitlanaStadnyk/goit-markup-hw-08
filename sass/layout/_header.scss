@@ -1,0 +1,12 @@
+.header {
+  background-color: $white-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $border-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  .container {
+    @extend %align-list;
+    justify-content: space-between;
+  }
+}
