@@ -11,11 +11,13 @@
       align-items: baseline;
     }
   }
-  @include tablet {
-    display: block;
-    .container {
-      display: flex;
-      align-items: baseline;
-    }
-  }
+  // @include tablet {
+  //   // display: block;
+  //   .container {
+  //     display: inline;
+  //     flex-wrap: wrap;
+  //     // align-items: baseline;
+  //     // justify-content: space-between;
+  //   }
+  // }
 }

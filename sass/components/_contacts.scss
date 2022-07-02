@@ -1,3 +1,8 @@
+// .cotacts--footer {
+//   // @include tablet {
+//   //   margin-right: 165px;
+//   // }
+// }
 .contacts__list {
   font-size: 14px;
 }
@@ -9,10 +14,11 @@
   @include mobile {
     text-align: center;
   }
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-  }
+  // @include tablet {
+  //   display: flex;
+  //   flex-direction: column;
+  //   display: inline;
+  // }
 }
 
 .contacts__list--header {
