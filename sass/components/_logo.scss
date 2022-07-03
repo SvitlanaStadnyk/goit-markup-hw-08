@@ -16,6 +16,9 @@
   text-decoration: none;
   margin-bottom: 20px;
   text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .logo--dark {

@@ -8,7 +8,6 @@
     display: block;
     .container {
       display: flex;
-      align-items: baseline;
     }
   }
   // @include tablet {
@@ -20,4 +19,20 @@
   //     // justify-content: space-between;
   //   }
   // }
+}
+
+.footer__thumb {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 76px;
+    padding-right: 89px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
 }

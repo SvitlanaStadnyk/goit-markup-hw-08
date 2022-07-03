@@ -1,5 +1,8 @@
 .team {
   background-color: $secondary-bg-color;
+  @include desktop {
+    margin-top: 94px;
+  }
 }
 .team__list {
   display: flex;

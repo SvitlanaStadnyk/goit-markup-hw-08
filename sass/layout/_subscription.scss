@@ -2,12 +2,6 @@
   @include mobile {
     text-align: center;
   }
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
-  }
 }
 
 .subscription__details {
@@ -20,7 +14,7 @@
   }
   @include desktop {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
   }
 }
 
@@ -37,6 +31,9 @@
   @include mobile {
     justify-content: center;
   }
+  @include desktop {
+    justify-content: left;
+  }
 }
 
 .subscription__btn {
@@ -51,11 +48,10 @@
   padding-left: 29px;
   padding-right: 28px;
   @include mobile {
-    display: flex;
-    align-items: center;
     margin-top: 20px;
+    display: inline-flex;
   }
-  @include mobile {
+  @include tablet {
     display: flex;
     align-items: center;
     margin-top: 20px;
