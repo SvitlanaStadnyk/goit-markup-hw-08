@@ -23,12 +23,13 @@
     <title>WebStudio</title>
   </head>
   <body>
-    <!--header-->
-    <!-- <header class="header">
-    <div class="container">
+    <!-- header-->
+    <header class="header">
+      <div class="container">
         <nav class="nav">
           <a class="logo logo--dark link" href="index.html"
-            ><span class="logo-part">Web</span>Studio</a>
+            ><span class="logo-part">Web</span>Studio</a
+          >
           <ul class="nav__list list">
             <li class="nav__item">
               <a href="index.html" class="current nav__link link">Студия</a>
@@ -57,10 +58,103 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">
+          <svg class="menu-icon" width="40" height="40">
+                <use href="./images/symbol-defs.svg#icon-menu-icon"></use></svg></a
+            ></button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+          <button type="button" class="menu-close-btn">
+            <svg class="close-icon" width="40" height="40">
+                <use href="./images/symbol-defs.svg#icon-menu-close-icon"></use></svg></a
+            ></button>
+          <ul class="mob-nav__list list">
+            <li class="mob-nav__item">
+              <a href="index.html" class="current mob-nav__link link">Студия</a>
+            </li>
+            <li class="mob-nav__item">
+              <a href="./portfolio.html" class="mob-nav__link link">Портфолио</a>
+            </li>
+            <li class="mob-nav__item">
+              <a href="./" class="mob-nav__link link">Контакты</a>
+            </li>
+          </ul>
+          </div>
+          <div class="mob-menu-bottom">
+          <ul class="mob-contacts__list">
+            <li class="mob-contacts__item list">
+              <a class="mob-mail__link link" href="mailto:info@devstudio.com">
+                <svg class="mob-mail__icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="mob-contacts__item list">
+              <a class="mob-tel__link link" href="tel:+380961111111">
+                <svg class="mob-tel__icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-socials__list list">
+            <li class="mob-socials__item">
+              <a
+                href="https://www.google.com/"
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                >Instagram</a
+              >
+              <!-- ><svg class="mob-socials__icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use></svg
+              ></a> -->
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href="https://www.google.com/"
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener nofollow norefferrer"
+                >Twitter</a
+              >
+              <!-- ><svg class="mob-socials__icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use></svg
+              ></a> -->
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href="https://www.google.com/"
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener nofollow norefferrer"
+                >Facebook</a
+              >
+              <!-- <svg class="mob-socials__icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use></svg
+              ></a> -->
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href="https://www.google.com/"
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener nofollow norefferrer"
+                >LinkedIn</a
+              >
+              <!-- ><svg class="mob-socials__icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use></svg
+              ></a> -->
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
-      <!--site header-->
+      <!-- site header -->
       <section class="main">
         <div class="container">
           <h1 class="main__title">Эффективные решения для вашего бизнеса</h1>
@@ -192,7 +286,6 @@
           </ul>
         </div>
       </section> -->
-      -->
       <!--Our team -->
       <section class="team section">
         <div class="container">
@@ -521,7 +614,7 @@
         </div>
       </address>
     </footer>
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close__btn" data-modal-close>
           <svg class="close__btn" width="11" height="11">
@@ -581,7 +674,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-  </body>
-</html> -->
+  <script src="./js/menu.js"></script>
   </body>
 </html>
+ 

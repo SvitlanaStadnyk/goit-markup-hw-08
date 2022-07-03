@@ -51,7 +51,7 @@ img {
   margin: -1px;
 }
 
-.header .container, .features__image, .clients__link, .mail__link--header, .tel__link--header, .contacts__list--header, .socials__link, .agreement__check, .check__text, .modal-close__btn {
+.mob-tel__link, .mob-mail__link, .features__image, .clients__link, .mail__link--header, .tel__link--header, .socials__link, .agreement__check, .check__text, .modal-close__btn {
   display: flex;
   align-items: center;
 }
@@ -74,8 +74,9 @@ img {
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
+  padding: 40px;
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -84,16 +85,39 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px 39px 40px 41px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+    padding: 40px 39px 40px 41px;
+  }
 }
 .modal__title {
   font-weight: 700;
   font-style: 20px;
-  line-height: 1.17;
+  line-height: 1.15;
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
   margin-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.17;
+  }
 }
 .modal__field {
   margin-bottom: 10px;
@@ -417,6 +441,16 @@ img {
   color: #000000;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .logo--dark {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo--dark {
+    margin-right: 93px;
+  }
+}
 
 .contacts__list {
   font-size: 14px;
@@ -434,10 +468,29 @@ img {
 }
 
 .contacts__list--header {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-align: center;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts__list--header {
+    font-weight: 500;
+    line-height: 1.17;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 84px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__list--header {
+    font-weight: 500;
+    line-height: 1.14;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -519,6 +572,11 @@ img {
 }
 .mail__link--header:hover .mail__icon, .mail__link--header:focus .mail__icon {
   fill: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .mail__link--header {
+    margin-bottom: 10px;
+  }
 }
 
 .mail__icon {
@@ -694,8 +752,191 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header .container {
+.header > .container {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.menu-open-btn:hover .menu-icon, .menu-open-btn:focus .menu-icon {
+  fill: #2196f3;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 48px;
+}
+.mob-menu .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 40px;
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.menu-close-btn:hover .close-icon, .menu-close-btn:focus .close-icon {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.mob-nav__list {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mob-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-nav__link {
+  color: #212121;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-nav__link:hover, .mob-nav__link:focus {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.mob-nav__link .current {
+  color: #2196f3;
+}
+
+.current {
+  color: #2196f3;
+}
+
+.mob-contacts__list {
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-bottom: 64px;
+}
+
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-mail__link {
+  font-size: 24px;
+  color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-mail__link:hover, .mob-mail__link:focus {
+  color: #2196f3;
+  text-decoration: none;
+}
+.mob-mail__link:hover .mail__icon, .mob-mail__link:focus .mail__icon {
+  fill: #2196f3;
+}
+
+.mob-mail__icon {
+  display: none;
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-tel__link {
+  padding-bottom: 32px;
+  color: #2196f3;
+  font-size: 34px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-tel__link:hover, .mob-tel__link:focus {
+  color: #2196f3;
+  text-decoration: none;
+}
+.mob-tel__link:hover .mob-tel__icon, .mob-tel__link:focus .mob-tel__icon {
+  fill: #2196f3;
+}
+
+.mob-tel__icon {
+  display: none;
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-socials__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mob-socials__item {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mob-socials__item:last-child {
+  margin-right: 0;
+  border-right: none;
+  padding-right: 10px;
+}
+
+.mob-socials__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-socials__link:hover, .mob-socials__link:focus {
+  color: #2196f3;
 }
 
 .main {
@@ -912,6 +1153,7 @@ img {
 .filters__list {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px 8px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -925,13 +1167,6 @@ img {
     justify-content: center;
     margin-bottom: 50px;
   }
-}
-.filters__item {
-  margin-right: 8px;
-  margin-bottom: 15px;
-}
-.filters__item:last-child {
-  margin-right: 0;
 }
 .filters__btn {
   background-color: #f5f4fa;
@@ -1223,24 +1458,40 @@ img {
 }
 
 .nav__list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 }
 
-.nav__item {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-right: 50px;
+  }
+  .nav__item.nav__item:last-child {
+    margin-right: 0;
+  }
 }
-
-.nav__item:last-child {
-  margin-right: 0;
-}
-
-.nav__link:hover,
-.nav__link:focus {
-  color: #2196f3;
-  text-decoration: none;
+@media screen and (min-width: 1200px) {
+  .nav__item {
+    margin-right: 50px;
+  }
+  .nav__item.nav__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .nav__link {
@@ -1249,6 +1500,10 @@ img {
   text-decoration: none;
   width: 100%;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav__link:hover, .nav__link:focus {
+  color: #2196f3;
+  text-decoration: none;
 }
 
 .nav__link .current {

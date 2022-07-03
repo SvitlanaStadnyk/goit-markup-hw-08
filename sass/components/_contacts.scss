@@ -22,11 +22,25 @@
 }
 
 .contacts__list--header {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-align: center;
-  @extend %align-list;
+  display: none;
+  @include tablet {
+    font-weight: 500;
+    line-height: 1.17;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 84px;
+  }
+  @include desktop {
+    font-weight: 500;
+    line-height: 1.14;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .contacts__item--footer:not(:last-child) {
@@ -114,6 +128,9 @@
     .mail__icon {
       fill: $accent-color;
     }
+  }
+  @include tablet {
+    margin-bottom: 10px;
   }
 }
 

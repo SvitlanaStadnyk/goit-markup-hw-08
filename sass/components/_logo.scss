@@ -21,4 +21,10 @@
 .logo--dark {
   color: $black-color;
   align-items: center;
+  @include tablet {
+    margin-right: 88px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
