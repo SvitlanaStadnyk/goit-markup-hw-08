@@ -16,15 +16,15 @@
 }
 
 .modal {
-  min-width: 450px;
-  min-height: 609px;
+  max-width: 450px;
+  max-height: 609px;
   padding: 40px 40px;
   @include tablet {
-    min-width: 450px;
+    max-width: 450px;
     padding: 40px 40px;
   }
   @include desktop {
-    min-width: 528px;
+    max-width: 528px;
     padding: 40px 39px 40px 41px;
   }
   border-radius: 4px;
